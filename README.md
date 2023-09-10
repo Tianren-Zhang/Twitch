@@ -7,8 +7,8 @@ It features a user-friendly interface, secure user authentication via Spring Sec
    <img width="1000" alt="Screenshot 2023-09-10 at 16.15.09" src="https://raw.githubusercontent.com/Tianren-Zhang/image/twitch/Screenshot%202023-09-10%20at%2016.15.09.png">
 
 2. After logging in, users gain access to a diverse selection of popular games, including League of Legends, Dota 2, Minecraft, and more.
-<img width="1000" alt="Screenshot 2023-09-10 at 15.08.19" src="https://raw.githubusercontent.com/Tianren-Zhang/image/twitch/Screenshot%202023-09-10%20at%2015.08.19.png">
-<img width="1000" alt="Screenshot 2023-09-10 at 15.07.54" src="https://raw.githubusercontent.com/Tianren-Zhang/image/twitch/Screenshot%202023-09-10%20at%2015.07.54.png">
+   <img width="1000" alt="Screenshot 2023-09-10 at 15.08.19" src="https://raw.githubusercontent.com/Tianren-Zhang/image/twitch/Screenshot%202023-09-10%20at%2015.08.19.png">
+   <img width="1000" alt="Screenshot 2023-09-10 at 15.07.54" src="https://raw.githubusercontent.com/Tianren-Zhang/image/twitch/Screenshot%202023-09-10%20at%2015.07.54.png">
 
 3. At the same time, users have the option to add their favorite live streams, videos, and clips to a Favorites list by clicking on the Favorites button.
    <img width="1100" alt="Screenshot 2023-09-10 at 15.08.56" src="https://raw.githubusercontent.com/Tianren-Zhang/image/twitch/Screenshot%202023-09-10%20at%2015.08.56.png">
