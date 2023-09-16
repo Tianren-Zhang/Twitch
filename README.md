@@ -1,4 +1,7 @@
 ## Twitch+: A Full-Stack, Personalized Twitch Resource Recommendation Engine
+- Experience the application here and enjoy!\
+https://qe3t8wds3r.us-east-2.awsapprunner.com/
+
 Twitch+ is a comprehensive Spring Boot application that provides personalized recommendations for Twitch resources such as streams, videos, and clips. Built with a user-friendly UI using React and Ant Design, the platform features a robust Content-based recommendation algorithm and supports user authentication via Spring Security. 
 
 The application offers seamless integration with real Twitch resources through a RESTful API.It features a user-friendly interface, secure user authentication via Spring Security, RESTful APIs, real-time data retrieval from Twitch API, and is hosted on AWS with containerization, RDS-backed MySQL database, and extensive unit testing.
