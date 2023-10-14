@@ -2,7 +2,7 @@ package com.laioffer.twitch.external.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-
+// Record represents data fields associated with a clip on the Twitch
 public record Clip(
         String id,
         String url,

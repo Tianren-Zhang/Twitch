@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-
+// // Record represents data fields associated with a Stream on the Twitch
 public record Stream(
         String id,
         @JsonProperty("user_id") String userId,

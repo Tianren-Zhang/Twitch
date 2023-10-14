@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-
+// Record represents data fields associated with a video on the Twitch
 public record Video(
         String id,
         @JsonProperty("stream_id") String streamId,

@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-
+// Spring Cloud generate a proxy at runtime that implements this interface.
+// The responses from the HTTP calls are automatically deserialized into the return types specified in the interface.
 @FeignClient(name = "twitch-api")
 public interface TwitchApiClient {
 
