@@ -7,10 +7,12 @@ import com.laioffer.twitch.external.model.Video;
 import com.laioffer.twitch.model.ItemType;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
-
+// Instances of this class correspond to entries in the "items" table in the database.
 @Table("items")
 public record ItemEntity(
+        // Primary key
         @Id Long id,
+        // Maps the Java property name to a different JSON property name
         @JsonProperty("twitch_id") String twitchId,
         String title,
         String url,
@@ -20,6 +22,7 @@ public record ItemEntity(
         @JsonProperty("item_type") ItemType type
 ) {
 
+    // Transform the Video, Clip, and Stream models into ItemEntity instances, suitable for database operations.
     public ItemEntity(String gameId, Video video) {
         this(null, video.id(), video.title(), video.url(), video.thumbnailUrl(), video.userName(), gameId, ItemType.VIDEO);
     }

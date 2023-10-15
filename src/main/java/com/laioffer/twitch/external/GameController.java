@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-
+// Expose endpoints related to the game entity in the context of the Twitch service:
 @RestController
 public class GameController {
 
@@ -15,7 +15,7 @@ public class GameController {
     public GameController(TwitchService twitchService) {
         this.twitchService = twitchService;
     }
-
+    // Get the top games or search for games by name
     @GetMapping("/game")
     public List<Game> getGames(@RequestParam(value = "game_name", required = false) String gameName) {
         if (gameName == null) {

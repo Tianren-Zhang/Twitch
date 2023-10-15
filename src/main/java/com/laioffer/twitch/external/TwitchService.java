@@ -18,7 +18,8 @@ public class TwitchService {
     public TwitchService(TwitchApiClient twitchApiClient) {
         this.twitchApiClient = twitchApiClient;
     }
-
+    // Cacheable annotation means that their results will be cached under the cache names "top_games" and "games_by_name" respectively.
+    // Subsequent calls with the same parameters will retrieve the results from the cache instead of making a fresh API call, until the cache is invalidated or expires.
     @Cacheable("top_games")
     public List<Game> getTopGames() {
         return twitchApiClient.getTopGames().data();
