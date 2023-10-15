@@ -13,7 +13,7 @@ public record TypeGroupedItemList(
         List<ItemEntity> videos,
         List<ItemEntity> clips
 ) {
-
+    // Accepts a list of mixed ItemEntity items, filters, and categorizes them into separate lists based on their type
     public TypeGroupedItemList(List<ItemEntity> items) {
         this(
                 filterForType(items, ItemType.STREAM),
@@ -21,7 +21,8 @@ public record TypeGroupedItemList(
                 filterForType(items, ItemType.CLIP)
         );
     }
-
+    // takes in a gameId and three separate lists streams, videos, and clips
+    // and transforms them into lists of ItemEntity objects using the respective transformation methods.
     public TypeGroupedItemList(String gameId, List<Stream> streams, List<Video> videos, List<Clip> clips) {
         this(
                 fromStreams(streams),

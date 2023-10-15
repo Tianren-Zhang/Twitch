@@ -4,7 +4,7 @@ import com.laioffer.twitch.model.TypeGroupedItemList;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
+// Provide an end point that could the search the games based on the game ID
 @RestController
 public class ItemController {
 

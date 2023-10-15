@@ -9,7 +9,8 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+// Provide the getItems function that get the items based on the game id
+// Return the videos, clips, and streams list respectively.
 @Service
 public class ItemService {
 
