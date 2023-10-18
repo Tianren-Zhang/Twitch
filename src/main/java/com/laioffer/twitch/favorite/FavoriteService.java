@@ -22,7 +22,9 @@ public class FavoriteService {
         this.itemRepository = itemRepository;
         this.favoriteRecordRepository = favoriteRecordRepository;
     }
-
+    // @CacheEvict: when this method is called, any cache entry with a name of recommend_items and a key that matches the first user will be removed.
+    // @Transactional: operations inside this method will either all succeed or all fail.
+    // marking an item as a favorite for a user
     @CacheEvict(cacheNames = "recommend_items", key = "#root.args[0]")
     @Transactional
     public void setFavoriteItem(UserEntity user, ItemEntity item) throws DuplicateFavoriteException {
@@ -36,7 +38,7 @@ public class FavoriteService {
         FavoriteRecordEntity favoriteRecord = new FavoriteRecordEntity(null, user.id(), persistedItem.id(), Instant.now());
         favoriteRecordRepository.save(favoriteRecord);
     }
-
+    // removes an item from a user's list of favorites.
     @CacheEvict(cacheNames = "recommend_items", key = "#root.args[0]")
     public void unsetFavoriteItem(UserEntity user, String twitchId) {
         ItemEntity item = itemRepository.findByTwitchId(twitchId);
