@@ -14,7 +14,7 @@ public interface UserRepository extends ListCrudRepository<UserEntity, Long> {
     List<UserEntity> findByFirstName(String firstName);
 
     UserEntity findByUsername(String username);
-
+    // Updates the first and last name of a user based on their username.
     @Modifying
     @Query("UPDATE users SET first_name = :firstName, last_name = :lastName WHERE username = :username")
     void updateNameByUsername(String username, String firstName, String lastName);

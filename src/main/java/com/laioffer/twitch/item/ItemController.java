@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 // Provide an end point that could the search the games based on the game ID
+// Return the item list based on clips, videos, and streams list
 @RestController
 public class ItemController {
 
