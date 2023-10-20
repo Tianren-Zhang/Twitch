@@ -21,6 +21,11 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
+    // registers a user.
+    // A new UserDetails object is created with the given username and encoded password.
+    // The .roles("USER") part assigns the role "USER" to this user. This role can be used by Spring Security for authorization decisions.
+    // The UserDetailsManager saves this new user.
+    // The userRepository updates the first and last name for this user.
     public void register(String username, String password, String firstName, String lastName) {
         UserDetails user = User.builder()
                 .username(username)

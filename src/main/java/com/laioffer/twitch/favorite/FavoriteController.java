@@ -26,14 +26,14 @@ public class FavoriteController {
         this.userService = userService;
     }
 
-
+    // Return the favorite items of the authenticated user, grouped by type.
     @GetMapping
     public TypeGroupedItemList getFavoriteItems(@AuthenticationPrincipal User user) {
         UserEntity userEntity = userService.findByUsername(user.getUsername());
         return favoriteService.getGroupedFavoriteItems(userEntity);
     }
 
-
+    // Marks an item as a favorite for the authenticated user.
     @PostMapping
     public void setFavoriteItem(@AuthenticationPrincipal User user, @RequestBody FavoriteRequestBody body) throws DuplicateFavoriteException {
         UserEntity userEntity = userService.findByUsername(user.getUsername());
@@ -44,7 +44,7 @@ public class FavoriteController {
         }
     }
 
-
+    // Removes an item from the authenticated user's list of favorites.
     @DeleteMapping
     public void unsetFavoriteItem(@AuthenticationPrincipal User user, @RequestBody FavoriteRequestBody body) {
         UserEntity userEntity = userService.findByUsername(user.getUsername());
