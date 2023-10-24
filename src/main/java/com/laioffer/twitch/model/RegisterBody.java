@@ -1,7 +1,7 @@
 package com.laioffer.twitch.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
+// Register schema
 public record RegisterBody(
         String username,
         String password,

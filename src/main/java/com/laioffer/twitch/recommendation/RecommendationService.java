@@ -29,7 +29,9 @@ public class RecommendationService {
         this.twitchService = twitchService;
         this.favoriteService = favoriteService;
     }
-
+    // responsible for generating recommendations based on the provided user entity.
+    // Specific, based on the favorite Items from the user.
+    // if the user doesn't have any favorite item yet, then return the top games.
     @Cacheable("recommend_items")
     public TypeGroupedItemList recommendItems(UserEntity userEntity) {
         List<String> gameIds;

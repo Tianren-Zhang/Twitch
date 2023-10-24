@@ -28,7 +28,10 @@ public class RecommendationController {
         this.userService = userService;
     }
 
-
+    // @AuthenticationPrincipal annotation is used to get the currently authenticated user from the Spring Security context.
+    // The method returns a TypeGroupedItemList, which could be a grouped list of recommended items.
+    // First we check if there is an authenticated user. If there is, we retrieve the corresponding UserEntity from the UserService.
+    // Then, we call the recommendItems method from the RecommendationService, passing the UserEntity
     @GetMapping("/recommendation")
     public TypeGroupedItemList getRecommendation(@AuthenticationPrincipal User user) throws IOException {
         UserEntity userEntity = null;
